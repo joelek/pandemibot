@@ -1,0 +1,24 @@
+{
+	"bin": {},
+	"dependencies": {},
+	"devDependencies": {
+		"typescript": "^4"
+	},
+	"license": "UNLICENSED",
+	"main": "",
+	"name": "@joelek/pandemibot",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/joelek/pandemibot.git"
+	},
+	"scripts": {
+		"build": "npm run generate && npm run compile && npm run bundle",
+		"bundle": "cp ./build/client/index.js ./dist/client/client.js",
+		"clean": "rm -rf ./build/ ./node_modules/",
+		"compile": "npx tsc -b",
+		"generate": "",
+		"preversion": "npm run build && git add ./",
+		"postversion": "git push && git push --tags"
+	},
+	"version": "0.0.0"
+}
