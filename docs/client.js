@@ -89,7 +89,7 @@ function on(element, type, listener) {
     element.addEventListener(type, listener);
     return element;
 }
-let urlInput = element("input.copy-link__input[disabled=][stack-below=]");
+let urlInput = element("input.copy-link__input[stack-below=]");
 let oldState = {
     recipient: "",
     violation: "",
