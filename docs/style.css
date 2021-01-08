@@ -40,6 +40,7 @@
 
 * {
 	border: none;
+	font-family: monospace;
 	font-size: 0px;
 	margin: 0px;
 	line-height: 1;
@@ -55,7 +56,6 @@ body {
 body {
 	background-color: rgb(255, 239, 31);
 	color: rgb(31, 31, 31);
-	font-family: monospace;
 	user-select: none;
 		-webkit-user-select: none;
 		-moz-user-select: none;
@@ -89,7 +89,8 @@ input {
 }
 
 .table__cell-input {
-	background-color: transparent;
+	background-clip: content-box;
+	background-color: rgba(0, 0, 0, 0.125);
 	box-sizing: border-box;
 	color: rgb(31, 31, 31);
 	font-size: 16px;
