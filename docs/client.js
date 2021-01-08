@@ -124,22 +124,22 @@ document.body.appendChild(element("div.app", element("div.app__header", element(
     updateState({
         violation: element.value
     });
-}), element("div.table__cell-title[stack-below=]", element("div.text-paragraph[single-line=]", text("Överträdelse"))))), element("div.text-group", element("div.text-paragraph", text(`Mottagaren av denna bot har gjort sig skyldig till pandemibrott enligt beskrivningen som återfinns i lag ${Math.floor(Math.random() * 100).toString()}:${Math.floor(Math.random() * 100).toString()} § ${Math.floor(Math.random() * 100)}.`)), element("div.text-paragraph", text("Brottets påföljd har fastställts till böter."))), element("div.table", element("div.table__cell", on(set(element("input.table__cell-input[spellcheck=false]"), "value", oldState.amount), "input", (event) => {
-    let element = event.target;
-    updateState({
-        amount: element.value
-    });
-}), element("div.table__cell-title[stack-below=]", element("div.text-paragraph[single-line=]", text("Bötesbelopp")))), element("div.table__cell", on(set(element("input.table__cell-input[spellcheck=false]"), "value", oldState.issuer), "input", (event) => {
+}), element("div.table__cell-title[stack-below=]", element("div.text-paragraph[single-line=]", text("Överträdelse")))), element("div.table__cell", on(set(element("input.table__cell-input[spellcheck=false]"), "value", oldState.issuer), "input", (event) => {
     let element = event.target;
     updateState({
         issuer: element.value
     });
-}), element("div.table__cell-title[stack-below=]", element("div.text-paragraph[single-line=]", text("Utfärdad av")))), element("div.table__cell", on(set(element("input.table__cell-input[spellcheck=false]"), "value", oldState.account), "input", (event) => {
+}), element("div.table__cell-title[stack-below=]", element("div.text-paragraph[single-line=]", text("Utfärdad av"))))), element("div.text-group", element("div.text-paragraph", text(`Mottagaren av denna bot har gjort sig skyldig till pandemibrott enligt beskrivningen som återfinns i lag ${Math.floor(Math.random() * 100).toString()}:${Math.floor(Math.random() * 100).toString()} § ${Math.floor(Math.random() * 100)}.`)), element("div.text-paragraph", text("Brottets påföljd har fastställts till böter."))), element("div.table", element("div.table__cell", on(set(element("input.table__cell-input[spellcheck=false]"), "value", oldState.amount), "input", (event) => {
+    let element = event.target;
+    updateState({
+        amount: element.value
+    });
+}), element("div.table__cell-title[stack-below=]", element("div.text-paragraph[single-line=]", text("Bötesbelopp")))), element("div.table__cell", on(set(element("input.table__cell-input[spellcheck=false]"), "value", oldState.account), "input", (event) => {
     let element = event.target;
     updateState({
         account: element.value
     });
-}), element("div.table__cell-title[stack-below=]", element("div.text-paragraph[single-line=]", text("Betalningsmottagare"))))), element("div.text-group", element("div.text-paragraph", text("Betalningen ska vara betalningsmottagaren tillhanda om/när du tycker att det verkar rimligt.")), element("div.text-paragraph", text("Anser du att boten är utfärdad på felaktiga grunder ska du i första hand vända dig till utfärdaren. Det går även bra att redigera och vidaresända boten till någon du anser förtjänar den bättre. Använd knappen nedan för att kopiera en länk som du kan dela i valfritt kommunikationsmedium.")), element("div.text-paragraph", text("Asocialstyrelsen"))), element("div.copy-link", on(element("button.copy-link__button[single-line]", text("Kopiera länk för delning")), "click", (event) => {
+}), element("div.table__cell-title[stack-below=]", element("div.text-paragraph[single-line=]", text("Betalas till"))))), element("div.text-group", element("div.text-paragraph", text("Betalningen ska vara betalningsmottagaren tillhanda om/när du tycker att det verkar rimligt.")), element("div.text-paragraph", text("Anser du att boten är utfärdad på felaktiga grunder ska du i första hand vända dig till utfärdaren. Det går även bra att redigera och vidaresända boten till någon du anser förtjänar den bättre. Använd knappen nedan för att kopiera en länk som du kan dela i valfritt kommunikationsmedium.")), element("div.text-paragraph", text("Asocialstyrelsen"))), element("div.copy-link", on(element("button.copy-link__button[single-line]", text("Kopiera länk för delning")), "click", (event) => {
     let element = event.target;
     urlInput.select();
     document.execCommand("copy");

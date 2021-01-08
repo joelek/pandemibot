@@ -147,6 +147,17 @@ document.body.appendChild(
 							element("div.table__cell-title[stack-below=]",
 								element("div.text-paragraph[single-line=]", text("Överträdelse"))
 							)
+						),
+						element("div.table__cell",
+							on(set(element("input.table__cell-input[spellcheck=false]"), "value", oldState.issuer), "input", (event) => {
+								let element = event.target as HTMLInputElement;
+								updateState({
+									issuer: element.value
+								});
+							}),
+							element("div.table__cell-title[stack-below=]",
+								element("div.text-paragraph[single-line=]", text("Utfärdad av"))
+							)
 						)
 				),
 				element("div.text-group",
@@ -166,17 +177,6 @@ document.body.appendChild(
 							)
 						),
 						element("div.table__cell",
-							on(set(element("input.table__cell-input[spellcheck=false]"), "value", oldState.issuer), "input", (event) => {
-								let element = event.target as HTMLInputElement;
-								updateState({
-									issuer: element.value
-								});
-							}),
-							element("div.table__cell-title[stack-below=]",
-								element("div.text-paragraph[single-line=]", text("Utfärdad av"))
-							)
-						),
-						element("div.table__cell",
 							on(set(element("input.table__cell-input[spellcheck=false]"), "value", oldState.account), "input", (event) => {
 								let element = event.target as HTMLInputElement;
 								updateState({
@@ -184,7 +184,7 @@ document.body.appendChild(
 								});
 							}),
 							element("div.table__cell-title[stack-below=]",
-								element("div.text-paragraph[single-line=]", text("Betalningsmottagare"))
+								element("div.text-paragraph[single-line=]", text("Betalas till"))
 							)
 						)
 				),
