@@ -194,7 +194,7 @@ document.body.appendChild(
 					element("div.text-paragraph", text("Asocialstyrelsen"))
 				),
 				element("div.copy-link",
-					on(element("button.copy-link__button[single-line]", text("Kopiera länk")), "click", (event) => {
+					on(element("button.copy-link__button[single-line]", text("Kopiera länk för delning")), "click", (event) => {
 						let element = event.target as HTMLButtonElement;
 						urlInput.select();
 						document.execCommand("copy");
