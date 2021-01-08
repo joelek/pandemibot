@@ -150,7 +150,7 @@ document.body.appendChild(
 						)
 				),
 				element("div.text-group",
-					element("div.text-paragraph", text(`Mottagaren av denna bot har gjort sig skyldig till pandemibrott enligt beskrivningen som återfinns i lag 1337:${Math.floor(Math.random() * 100).toString()} § ${Math.floor(Math.random() * 100)}.`)),
+					element("div.text-paragraph", text(`Mottagaren av denna bot har gjort sig skyldig till pandemibrott enligt beskrivningen som återfinns i lag ${Math.floor(Math.random() * 100).toString()}:${Math.floor(Math.random() * 100).toString()} § ${Math.floor(Math.random() * 100)}.`)),
 					element("div.text-paragraph", text("Brottets påföljd har fastställts till böter."))
 				),
 				element("div.table",

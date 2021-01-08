@@ -124,7 +124,7 @@ document.body.appendChild(element("div.app", element("div.app__header", element(
     updateState({
         violation: element.value
     });
-}), element("div.table__cell-title[stack-below=]", element("div.text-paragraph[single-line=]", text("Överträdelse"))))), element("div.text-group", element("div.text-paragraph", text(`Mottagaren av denna bot har gjort sig skyldig till pandemibrott enligt beskrivningen som återfinns i lag 1337:${Math.floor(Math.random() * 100).toString()} § ${Math.floor(Math.random() * 100)}.`)), element("div.text-paragraph", text("Brottets påföljd har fastställts till böter."))), element("div.table", element("div.table__cell", on(set(element("input.table__cell-input[spellcheck=false]"), "value", oldState.amount), "input", (event) => {
+}), element("div.table__cell-title[stack-below=]", element("div.text-paragraph[single-line=]", text("Överträdelse"))))), element("div.text-group", element("div.text-paragraph", text(`Mottagaren av denna bot har gjort sig skyldig till pandemibrott enligt beskrivningen som återfinns i lag ${Math.floor(Math.random() * 100).toString()}:${Math.floor(Math.random() * 100).toString()} § ${Math.floor(Math.random() * 100)}.`)), element("div.text-paragraph", text("Brottets påföljd har fastställts till böter."))), element("div.table", element("div.table__cell", on(set(element("input.table__cell-input[spellcheck=false]"), "value", oldState.amount), "input", (event) => {
     let element = event.target;
     updateState({
         amount: element.value
