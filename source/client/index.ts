@@ -80,7 +80,7 @@ function on<A extends keyof HTMLElementEventMap>(element: HTMLElement, type: A, 
 	return element;
 }
 
-let urlInput = element("input.copy-link__input[stack-below=]") as HTMLInputElement;
+let urlInput = element("input.copy-link__input[disabled=][stack-below=]") as HTMLInputElement;
 let oldState = {
 	recipient: "",
 	violation: "",
