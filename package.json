@@ -13,7 +13,7 @@
 	},
 	"scripts": {
 		"build": "npm run generate && npm run compile && npm run bundle",
-		"bundle": "cp ./build/client/index.js ./dist/client/client.js",
+		"bundle": "cp ./build/client/index.js ./docs/client.js",
 		"clean": "rm -rf ./build/ ./node_modules/",
 		"compile": "npx tsc -b",
 		"generate": "",
