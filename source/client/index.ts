@@ -94,6 +94,7 @@ function updateState(newState: Partial<typeof oldState>): void {
 		...oldState,
 		...newState
 	};
+	// TODO: Use hash component instead of search component.
 	window.history.replaceState(undefined, "", `?${JSON.stringify(state)}`);
 	urlInput.value = window.location.href;
 	oldState = state;
@@ -102,6 +103,7 @@ function updateState(newState: Partial<typeof oldState>): void {
 {
 	let newState: Partial<typeof oldState> = {};
 	try {
+		// TODO: Use hash component instead of search component.
 		let json = as.record(JSON.parse(decodeURI(window.location.search.slice(1))));
 		for (let key in oldState) {
 			newState[key as keyof typeof oldState] = json[key];

@@ -99,6 +99,7 @@ let oldState = {
 };
 function updateState(newState) {
     let state = Object.assign(Object.assign({}, oldState), newState);
+    // TODO: Use hash component instead of search component.
     window.history.replaceState(undefined, "", `?${JSON.stringify(state)}`);
     urlInput.value = window.location.href;
     oldState = state;
@@ -106,6 +107,7 @@ function updateState(newState) {
 {
     let newState = {};
     try {
+        // TODO: Use hash component instead of search component.
         let json = as.record(JSON.parse(decodeURI(window.location.search.slice(1))));
         for (let key in oldState) {
             newState[key] = json[key];
