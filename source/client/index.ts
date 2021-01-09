@@ -127,8 +127,9 @@ document.body.appendChild(
 		),
 		element("div.app__content[scroll-container=]",
 			element("div.content[content=]",
-				element("div.table",
-						element("div.table__cell",
+				element("table",
+					element("tr",
+						element("td.table__cell",
 							on(set(element("input.table__cell-input[spellcheck=false]"), "value", oldState.recipient), "input", (event) => {
 								let element = event.target as HTMLInputElement;
 								updateState({
@@ -139,7 +140,9 @@ document.body.appendChild(
 								element("div.text-paragraph[single-line=]", text("Mottagare"))
 							)
 						),
-						element("div.table__cell",
+					),
+					element("tr",
+						element("td.table__cell",
 							on(set(element("input.table__cell-input[spellcheck=false]"), "value", oldState.violation), "input", (event) => {
 								let element = event.target as HTMLInputElement;
 								updateState({
@@ -150,7 +153,9 @@ document.body.appendChild(
 								element("div.text-paragraph[single-line=]", text("Överträdelse"))
 							)
 						),
-						element("div.table__cell",
+					),
+					element("tr",
+						element("td.table__cell",
 							on(set(element("input.table__cell-input[spellcheck=false]"), "value", oldState.issuer), "input", (event) => {
 								let element = event.target as HTMLInputElement;
 								updateState({
@@ -161,13 +166,15 @@ document.body.appendChild(
 								element("div.text-paragraph[single-line=]", text("Utfärdad av"))
 							)
 						)
+					)
 				),
 				element("div.text-group",
 					element("div.text-paragraph", text(`Mottagaren av denna bot har gjort sig skyldig till pandemibrott enligt beskrivningen som återfinns i lag ${Math.floor(Math.random() * 100).toString()}:${Math.floor(Math.random() * 100).toString()} § ${Math.floor(Math.random() * 100)}.`)),
 					element("div.text-paragraph", text("Brottets påföljd har fastställts till böter."))
 				),
-				element("div.table",
-						element("div.table__cell",
+				element("table",
+					element("tr",
+						element("td.table__cell",
 							on(set(element("input.table__cell-input[spellcheck=false]"), "value", oldState.amount), "input", (event) => {
 								let element = event.target as HTMLInputElement;
 								updateState({
@@ -178,7 +185,9 @@ document.body.appendChild(
 								element("div.text-paragraph[single-line=]", text("Bötesbelopp"))
 							)
 						),
-						element("div.table__cell",
+					),
+					element("tr",
+						element("td.table__cell",
 							on(set(element("input.table__cell-input[spellcheck=false]"), "value", oldState.account), "input", (event) => {
 								let element = event.target as HTMLInputElement;
 								updateState({
@@ -189,6 +198,7 @@ document.body.appendChild(
 								element("div.text-paragraph[single-line=]", text("Betalas till"))
 							)
 						)
+					)
 				),
 				element("div.text-group",
 					element("div.text-paragraph", text("Betalningen ska vara betalningsmottagaren tillhanda om/när du tycker att det verkar rimligt.")),
