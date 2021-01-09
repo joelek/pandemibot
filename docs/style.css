@@ -160,7 +160,6 @@ input {
 .copy-link__input {
 	font-size: 12px;
 	opacity: 0;
-	pointer-events: none;
 }
 
 .copy-link__button {

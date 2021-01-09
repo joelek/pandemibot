@@ -143,6 +143,7 @@ document.body.appendChild(element("div.app", element("div.app__header", element(
     let element = event.target;
     urlInput.select();
     document.execCommand("copy");
+    urlInput.blur();
     let oldText = element.textContent;
     element.textContent = "Länk kopierad!";
     setTimeout(() => {

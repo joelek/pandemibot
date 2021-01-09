@@ -198,6 +198,7 @@ document.body.appendChild(
 						let element = event.target as HTMLButtonElement;
 						urlInput.select();
 						document.execCommand("copy");
+						urlInput.blur();
 						let oldText = element.textContent;
 						element.textContent = "Länk kopierad!";
 						setTimeout(() => {
